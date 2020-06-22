@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Anor londo Hotel</title>
 		<p>Book your stay today!</p>
+		<script src="js/one_page_website.js" defer></script>
 		<link rel="stylesheet" href="./css/one_page_website.css">
 	</head>
 	<body>
@@ -37,55 +38,81 @@
 				<p>Check us out!</p>
 				<div class="flex-container">
 				
-				<!-- PHOTO CONTAINER1 -->
-				<div class="photo-container">
-					<div class="photo">
-						<img src="./images/thumbnail_1.jpg" alt="You Died." width="300" height="300">
-						<div class="photo-overlay">
-							<h3 class="white-head">Click to Enlarge</h3>
+					<h2 style="text-align:center">AnorLondo Slides</h2>
+					<p style="text-align:center">Click the pictures below for more information.</p>
+			
+					<div class="row">
+					  <div class="column">
+						<img src="./images/thumbnail_1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						<p>Click to enlarge.</p>
+					  </div>
+					  <div class="column">
+						<img src="./images/thumbnail_2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						<p>Click to enlarge.</p>
+					  </div>
+					  <div class="column">
+						<img src="./images/thumbnail_3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+						<p>Click to enlarge.</p>
+					  </div>
+					  <div class="column">
+						<img src="./images/thumbnail_4.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+						<p>Click to enlarge.</p>
+					  </div>
+					</div>
+					
+					<div id="modal" class="modal">
+					  <span class="close cursor" onclick="closeModal()">&times;</span>
+					  <div class="modal-content">
+					
+						<div class="mySlides">
+						  <div class="numbertext">1 / 4</div>
+						  <img src="./images/thumbnail_1.jpg" style="width:100%">
+						</div>
+					
+						<div class="mySlides">
+						  <div class="numbertext">2 / 4</div>
+						  <img src="./images/thumbnail_2.jpg" style="width:100%">
+						</div>
+					
+						<div class="mySlides">
+						  <div class="numbertext">3 / 4</div>
+						  <img src="./images/thumbnail_3.jpg" style="width:100%">
+						</div>
+						
+						<div class="mySlides">
+						  <div class="numbertext">4 / 4</div>
+						  <img src="./images/thumbnail_4.png" style="width:100%">
+						</div>
+						
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					
+						<div class="caption-container">
+						  <p id="caption"></p>
+						</div>
+					
+					
+						<div class="column">
+						  <img class="demo cursor" src="./images/thumbnail_1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Big Orc">
 							<p>Our hotel manager, he's nicer then he looks.</p>
 						</div>
-					</div>
-				</div>
-				<!-- END PHOTO CONTAINER1 -->
-				
-				<!-- PHOTO CONTAINER2 -->
-				<div class="photo-container">
-					<div class="photo">
-						<img src="./images/thumbnail_2.jpg" alt="You Died." width="300" height="300">
-						<div class="photo-overlay">
-							<h3 class="white-head">Click to Enlarge</h3>
-							<p>Amazing view from the front.</p>
+						<div class="column">
+						  <img class="demo cursor" src="./images/thumbnail_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Good View">
+						   <p>Amazing view from the front.</p>
 						</div>
-					</div>
-				</div>
-				<!-- END PHOTO CONTAINER2 -->
-				
-				<!-- PHOTO CONTAINER3 -->
-				<div class="photo-container">
-					<div class="photo">
-						<img src="./images/thumbnail_3.jpg" alt="You Died." width="300" height="300">
-						<div class="photo-overlay">
-							<h3 class="white-head">Click to Enlarge</h3>
-							<p>See? He always helps.</p>
+						<div class="column">
+						  <img class="demo cursor" src="./images/thumbnail_3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Orc work good">
+						   <p>See? He always helps.</p>
 						</div>
-					</div>
-				</div>
-				<!-- END PHOTO CONTAINER3 -->
-				
-				<!-- PHOTO CONTAINER4 -->
-				<div class="photo-container">
-					<div class="photo">
-						<img src="./images/thumbnail_4.png" alt="You Died." width="300" height="300">
-						<div class="photo-overlay">
-							<h3 class="white-head">Click to Enlarge</h3>
-							<p>Our award winning staff.</p>
+						<div class="column">
+						  <img class="demo cursor" src="./images/thumbnail_4.png" style="width:100%" onclick="currentSlide(4)" alt="Anor Londo guard">
+						   <p>Our award winning staff.</p>
 						</div>
+					  </div>
 					</div>
-				</div>
-				<!-- END PHOTO CONTAINER4 -->
-				<p>Security working hard for you!</p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/w3iDB9v_WQc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				
+				<p>Security working hard!</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/mmhQqj22QCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</section>
 		<!-- END GALLERY -->
